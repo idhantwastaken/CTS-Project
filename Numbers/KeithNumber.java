@@ -12,13 +12,11 @@ class KeithNumber {
         int next = 0;
         while(next < n) {
             next = 0;
-            for (int i = 0; i < seq.length; i++) {
+            for (int i = 0; i < seq.length; i++)
                 next += seq[i];
-            }
             if (next == n) return true;
-            for (int i = 0; i < seq.length - 1; i++) {
+            for (int i = 0; i < seq.length - 1; i++)
                 seq[i] = seq[i + 1];
-            }
             seq[seq.length - 1] = next;
         }
         return false;

@@ -1,12 +1,9 @@
 import java.util.Scanner;
-
 public class Fascinating {
     int num;
     boolean freq[] = new boolean[10];
     
-    Fascinating(int n) {
-        num = n;
-    }
+    Fascinating(int n) { num = n;}
     
     void extract(int n) {
         while (n > 0) {
@@ -21,12 +18,11 @@ public class Fascinating {
         extract(num * 2);
         extract(num * 3);
 
-        for (int i = 1; i <= 9; i++) {
+        for (int i = 1; i <= 9; i++)
             if (!freq[i]) {
                 System.out.println(num + " is not fascinating.");
                 return;
             }
-        }
         System.out.println(num + " is fascinating.");
     }
     
