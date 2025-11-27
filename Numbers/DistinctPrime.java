@@ -1,3 +1,13 @@
+/* Question: 
+Write a program to check whether a given number is a distinct prime number or not.
+A distinct prime number is a number that is made up of only prime digits 
+and each digit appears only once in the number.
+
+For Example:
+INPUT:  N = 2357
+OUTPUT: 2357 is a distinct prime number.
+
+*/
 import java.util.Scanner;
 class DistinctPrime {
     int n;
@@ -6,7 +16,6 @@ class DistinctPrime {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a number:");
         n = sc.nextInt();
-        sc.close();
     }
     
     boolean isDistinctPrime() {

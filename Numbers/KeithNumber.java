@@ -1,3 +1,13 @@
+/*Question: 
+Write a program to check whether a given number is a Keith number or not.
+A Keith number is an n-digit number N that appears in a special sequence 
+generated from its own digits. The special sequence has first n terms as digits
+of x and other terms are recursively evaluated as sum of previous n terms.
+
+For Example:
+INPUT:  N = 14
+OUTPUT: 14 is a Keith number.
+*/
 import java.util.*;
 class KeithNumber {
     boolean isKeith(int n) {
@@ -31,6 +41,5 @@ class KeithNumber {
         if(ob.isKeith(n)) {
             System.out.println(n + " is a keith no.");
         } else System.out.println(n + " is not a keith no.");
-        sc.close();
     }
 }

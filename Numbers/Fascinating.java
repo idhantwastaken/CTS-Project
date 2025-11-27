@@ -1,3 +1,12 @@
+/* Question:
+Write a program to check whether a given number is a Fascinating number or not.
+A fascinating number is a number which when multiplied by 2 and 3, and the
+concatenation of the results along with the original number contains all digits from 1 to 9 exactly once.
+
+For Example:
+INPUT:  n = 192
+OUTPUT: 192 is a Fascinating number.
+*/
 import java.util.Scanner;
 public class Fascinating {
     int num;
@@ -17,12 +26,12 @@ public class Fascinating {
         extract(num);
         extract(num * 2);
         extract(num * 3);
-
+        
         for (int i = 1; i <= 9; i++)
             if (!freq[i]) {
                 System.out.println(num + " is not fascinating.");
-                return;
-            }
+            return;
+        }
         System.out.println(num + " is fascinating.");
     }
     
@@ -32,9 +41,6 @@ public class Fascinating {
         System.out.println("Enter an integer between 99 and 1000.");
         int a = sc.nextInt();
         Fascinating ob = new Fascinating(a);
-        if (a > 99 && a < 1000)
-            ob.isFascinating();
-        else System.out.println("Invalid Input!");
-        sc.close();
+        ob.isFascinating();
     }
 }
