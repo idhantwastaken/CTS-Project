@@ -8,7 +8,7 @@ For Example:
 INPUT:  N = 14
 OUTPUT: 14 is a Keith number.
 */
-import java.util.*;
+import java.util.Scanner;
 class KeithNumber {
     boolean isKeith(int n) {
         int l = (int)Math.log10(n) + 1;

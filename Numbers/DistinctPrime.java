@@ -10,15 +10,7 @@ OUTPUT: 2357 is a distinct prime number.
 */
 import java.util.Scanner;
 class DistinctPrime {
-    int n;
-    
-    void input() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a number:");
-        n = sc.nextInt();
-    }
-    
-    boolean isDistinctPrime() {
+    boolean isDistinctPrime(int n) {
         String str = Integer.toString(n);
         
         for (int i = 0; i < str.length(); i++) {
@@ -33,11 +25,13 @@ class DistinctPrime {
     
     public static void main(String[] args) {
         DistinctPrime ob = new DistinctPrime();
-        ob.input();
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number:");
+        int n = sc.nextInt();
 
-        if (ob.isDistinctPrime()) {
-            System.out.println(ob.n + " is a distinct prime number.");
+        if (ob.isDistinctPrime(n)) {
+            System.out.println(n + " is a distinct prime number.");
         } else
-            System.out.println(ob.n + " is not a distinct prime number.");
+            System.out.println(n + " is not a distinct prime number.");
     }
 }

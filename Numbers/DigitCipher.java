@@ -16,7 +16,7 @@ class DigitCipher {
     int n; String k;
     
     void cipher() {
-        int l = (int)Math.log10(n) + 1;
+        int l = (int)(Math.log10(n)) + 1;
         int ar[] = new int[l];
         if (k.length() != l) {
             System.out.println("Invalid Key!");
@@ -27,14 +27,13 @@ class DigitCipher {
             char c = k.charAt(i);
             int d = Integer.valueOf(c) - 48;
             
-            if (k.indexOf(c) != k.lastIndexOf(c) && d > l){
+            if (k.indexOf(c) != k.lastIndexOf(c) || d > l){
                 System.out.println("Invalid Key!");
                 return;
             }
             
             ar[d - 1] = n % 10;
             n /= 10;
-            k = k.substring(0, i);
         }
         
         System.out.print("Ciphered number: ");
@@ -51,5 +50,6 @@ class DigitCipher {
         System.out.println("Enter key:");
         int k = sc.nextInt();
         dc.k = Integer.toString(k);
+        dc.cipher();
     }
 }

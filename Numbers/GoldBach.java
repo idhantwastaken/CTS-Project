@@ -38,6 +38,6 @@ public class GoldBach {
         if (a > 9 && a < 50 && a % 2 == 0)
             ob.isGoldBach(a);
         else
-            System.out.println("Entered no. is not GoldBach.");
+            System.out.println(a + " is not GoldBach.");
     }
 }

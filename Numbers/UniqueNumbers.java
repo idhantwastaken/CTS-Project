@@ -10,7 +10,7 @@ OUTPUT: THE UNIQUE-DIGIT INTEGERS ARE:-
 102, 103, 104, 105, 106, 107, 108, 109, 120.
 FREQUENCY OF UNIQUE-DIGIT IN INTEGERS IS : 9
 */
-import java.util.*;
+import java.util.Scanner;
 class UniqueNumbers{
         boolean isUniqueNumber(int a){
                 boolean digits[] = new boolean[10];

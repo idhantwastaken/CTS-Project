@@ -38,7 +38,7 @@ public class Fascinating {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
-        System.out.println("Enter an integer between 99 and 1000.");
+        System.out.println("Enter an integer:");
         int a = sc.nextInt();
         Fascinating ob = new Fascinating(a);
         ob.isFascinating();
