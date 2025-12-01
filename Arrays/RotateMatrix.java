@@ -22,14 +22,10 @@ class RotateMatrix{
     }
     int[][] rotmat(){
         int rotmat[][]=new int[n][m];
-        int q=0;
         for(int i=0;i<n;i++){
-            int p=m-1;
             for(int j=0;j<m;j++){
-                rotmat[i][j]=A[p][q];
-                p--;
+                rotmat[i][j]=A[m-1-j][i];
             }
-            q++;
         }
         return rotmat;
     }
