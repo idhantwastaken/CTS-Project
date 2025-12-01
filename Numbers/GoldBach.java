@@ -32,7 +32,7 @@ public class GoldBach {
         Scanner sc = new Scanner(System.in);
         GoldBach ob = new GoldBach();
 
-        System.out.println("Enter an integer.");
+        System.out.print("Enter an integer:");
         int a = sc.nextInt();
 
         if (a > 9 && a < 50 && a % 2 == 0)
