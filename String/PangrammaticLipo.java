@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.StringTokenizer;
 class PangrammaticLipo{
     static Scanner sc=new Scanner(System.in);
     String sent;
