@@ -41,3 +41,27 @@ public class GoldBach {
             System.out.println(a + " is not GoldBach.");
     }
 }
+
+/*
+Algorithm : Goldbach Number
+1.	Start the Algorithm.
+2.	Accept an integer n.
+3.	If n is not even or n < 10 or n > 50,
+display
+“n is not GoldBach.”
+and stop the algorithm.
+4.	Define a function isPrime(n) which returns a boolean value.
+•	For values from 2 to n / 2:
+•	If n is divisible by any value, return false.
+•	If no divisor is found, return true.
+5.	Define a function isGoldBach(n) to display all possible Goldbach pairs.
+•	For each value p1 from 3 to n / 2:
+•	If p1 is prime:
+•	Compute p2 = n − p1.
+•	If both p1 and p2 are prime:
+•	Display
+n : p1 + p2
+6.	Call the function isGoldBach(n).
+7.	Stop the Algorithm.
+
+*/
