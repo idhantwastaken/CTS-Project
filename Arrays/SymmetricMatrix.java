@@ -81,3 +81,40 @@ class SymmetricMatrix{
         ob.display();
     }
 }
+
+/*
+Algorithm : Symmetric Matrix with Diagonal Sums
+1.	Start the Algorithm.
+2.	Accept an integer M representing the order of a square matrix.
+3.	If M < 2 or M > 10,
+display the message “SIZE IS OUT OF RANGE.” and stop the algorithm.
+4.	Create an integer matrix A of size M × M.
+5.	Define a function fillArray() to accept the elements of the matrix.
+•	Display a message to enter the matrix elements.
+•	For each row index from 0 to M − 1:
+•	For each column index from 0 to M − 1:
+•	Accept an integer value and store it in A[row][column].
+6.	Define a function symCheck() which returns a boolean value.
+•	For each row index from 0 to M − 1:
+•	For each column index from 0 to M − 1:
+•	If A[i][j] is not equal to A[j][i], return false.
+•	If all corresponding elements are equal, return true.
+7.	Define a function diagSum() to find the diagonal sums.
+•	Initialize Ldiag = 0 and Rdiag = 0.
+•	For each row index from 0 to M − 1:
+•	For each column index from 0 to M − 1:
+•	If i equals j, add A[i][j] to Ldiag.
+•	If i + j equals M − 1, add A[i][j] to Rdiag.
+•	Display the sum of the left diagonal.
+•	Display the sum of the right diagonal.
+8.	Define a function display() to display the matrix and results.
+•	Display the original matrix row-wise.
+•	Call the function symCheck():
+•	If it returns true, display “THE GIVEN MATRIX IS SYMMETRIC.”
+•	Otherwise, display “THE GIVEN MATRIX IS NOT SYMMETRIC.”
+•	Call the function diagSum().
+9.	Call the function fillArray().
+10.	Call the function display().
+11.	Stop the Algorithm.
+
+*/
