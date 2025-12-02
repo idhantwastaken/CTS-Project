@@ -96,3 +96,56 @@ class MatrixPrimeSum {
         ob.maxSum();
     }
 }
+
+/*
+Algorithm : Matrix Prime Sum (Row-wise and Column-wise)
+1.	Start the Algorithm.
+2.	Accept two integers M and N representing the number of rows and columns of the matrix.
+3.	If M < 3 or M > 9 or N < 3 or N > 9,
+display the message “INVALID INPUT” and stop the algorithm.
+4.	Create an integer matrix A of size M × N.
+5.	Define a function fillArray() to accept the elements of the matrix.
+o	Display a message to enter array elements.
+o	For each row index from 0 to M − 1:
+	For each column index from 0 to N − 1:
+	Accept an integer value and store it in A[row][column].
+	If the value is negative:
+	Display “INVALID INPUT”.
+	Stop the algorithm immediately.
+6.	Define a function isPrime(num) which returns a boolean value.
+o	Initialize a counter f to 0.
+o	For values from 1 to num:
+	If num is divisible by the value, increment f.
+o	If f equals 2, return true; otherwise return false.
+7.	Define a function maxSum() to find rows and columns having the maximum sum of prime numbers.
+o	Initialize maxRow = 0, maxCol = 0.
+o	Initialize strings rowIndex and colIndex as empty.
+8.	Display the matrix row-wise.
+o	For each row index from 0 to M − 1:
+	Initialize sum = 0.
+	For each column index from 0 to N − 1:
+	Display the element A[row][column].
+	If the element is prime, add it to sum.
+	If sum is greater than maxRow:
+	Assign sum to maxRow and store the row index in rowIndex.
+	Else if sum is equal to maxRow:
+	Append the row index to rowIndex.
+9.	If maxRow equals 0,
+display “NO PRIME NUMBERS FOUND IN ANY ROW”,
+else display the row indices and maximum prime sum.
+10.	For each column index from 0 to N − 1:
+o	Initialize sum = 0.
+o	For each row index from 0 to M − 1:
+	If A[row][column] is prime, add it to sum.
+o	If sum is greater than maxCol:
+	Assign sum to maxCol and store the column index in colIndex.
+o	Else if sum is equal to maxCol:
+	Append the column index to colIndex.
+11.	If maxCol equals 0,
+display “NO PRIME NUMBERS FOUND IN ANY COLUMN”,
+else display the column indices and maximum prime sum.
+12.	Call the function fillArray().
+13.	Call the function maxSum().
+14.	Stop the Algorithm.
+
+*/
