@@ -35,3 +35,26 @@ class DistinctPrime {
             System.out.println(n + " is not a distinct prime number.");
     }
 }
+
+/*
+Algorithm : Distinct Prime Number
+1.	Start the Algorithm.
+2.	Accept an integer n.
+3.	Define a function isDistinctPrime(n) which returns a boolean value.
+4.	Convert the number n into a string.
+5.	For each character in the string representation of the number:
+•	Check whether the digit is one of 2, 3, 5 or 7.
+•	If not, return false.
+•	Check whether the digit appears more than once in the number.
+•	If it appears more than once, return false.
+6.	If all digits are prime digits and no digit is repeated, return true.
+7.	Call the function isDistinctPrime(n) in the main part of the algorithm.
+8.	If the function returns true,
+display
+“n is a distinct prime number.”
+9.	Otherwise,
+display
+“n is not a distinct prime number.”
+10.	Stop the Algorithm.
+
+*/
