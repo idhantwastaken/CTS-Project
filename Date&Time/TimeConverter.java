@@ -1,5 +1,11 @@
-import java.util.Scanner;
+/*Question:
+Write a program which converts time from 12-hour format to 24-hour format.
 
+For example:
+Input: 02:30 PM
+Output: 14:30
+*/
+import java.util.Scanner;
 public class TimeConverter {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -11,14 +17,16 @@ public class TimeConverter {
         String sthour= input.substring(0,2);
         String stmin=input.substring(3,5);
         int hour = Integer.parseInt(sthour);
-        if(hour>12){
-            System.out.println("Invalid Output");
+        int min = Integer.parseInt(stmin);
+
+        if(hour>12 || hour<1 || min>59 || min<0){
+            System.out.println("Invalid Input!");
             System.exit(0);
         }
 
         if (check.equals("AM")) {
             if (hour == 12) {
-                hour = 0;  // 12 AM → 00
+                hour = 0;
             }
         } else { // PM
             if (hour != 12) {
@@ -26,7 +34,6 @@ public class TimeConverter {
             }
         }
 
-        System.out.printf("24-hour format: "+hour+":"+stmin+check);
-        
+        System.out.printf("24-hour format: "+hour+":"+stmin); 
     }
 }

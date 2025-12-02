@@ -13,19 +13,17 @@ class Hamming {
     void isHamming(int n) {
         int counter[] = new int[3];
         int temp = n;
-        while (n > 1) {
-            if (n % 2 == 0) {
-                counter[0]++;
-                n = n / 2;
-            }
-            if (n % 3 == 0) {
-                counter[1]++;
-                n = n / 3;
-            }
-            if (n % 5 == 0) {
-                counter[2]++;
-                n = n / 5;
-            }
+        while (n % 2 == 0) {
+            counter[0]++;
+            n /= 2;
+        }
+        while (n % 3 == 0) {
+            counter[1]++;
+            n /= 3;
+        }
+        while (n % 5 == 0) {
+            counter[2]++;
+            n /= 5;
         }
         if (n == 1) {
             System.out.println(temp + " = 2^" + counter[0] + " * 3^" + counter[1] + " * 5^" + counter[2]);
