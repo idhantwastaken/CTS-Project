@@ -53,3 +53,26 @@ class DigitCipher {
         dc.cipher();
     }
 }
+
+/*
+Algorithm : Digit Cipher
+1.	Start the Algorithm.
+2.	Accept an integer n.
+3.	Accept an integer k representing the key and store it as a string.
+4.	Determine the number of digits l in the number n.
+5.	If the length of the key is not equal to l,
+display “Invalid Key!” and stop the algorithm.
+6.	Create an integer array ar of size l.
+7.	Define a function cipher() to generate the ciphered number.
+•	For each index i from l − 1 down to 0:
+•	Extract the character at position i from the key.
+•	Convert the character into its integer value d.
+•	If the digit d is repeated in the key or d is greater than l:
+•	Display “Invalid Key!” and stop the algorithm.
+•	Assign the last digit of n to ar[d − 1].
+•	Remove the last digit from n.
+8.	Display the message “Ciphered number:”.
+9.	Traverse through the array ar from index 0 to l − 1 and print each element.
+10.	Stop the Algorithm.
+
+*/
