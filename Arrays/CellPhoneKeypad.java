@@ -1,3 +1,8 @@
+/*Question:
+Write a program to calculate the number of keystrokes required to type a given word on a
+cell phone keypad. The mapping of letters to keypad numbers is as follows:
+
+*/
 import java.util.Scanner;
 class CellPhoneKeypad{
     String word;

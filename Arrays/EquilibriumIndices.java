@@ -4,9 +4,8 @@ An equilibrium index is an index such that the sum of elements at lower
 indices is equal to the sum of elements at higher indices.
 
 For example:
-Input: L = 8
-Enter elements of the array:
--7 1 5 2 -4 3 0 5
+Input: L: 8
+Enter elements of the array: -7 1 5 2 -4 3 0 5
 Output: Equilibrium Indices: 3, 6
 */
 import java.util.Scanner;
