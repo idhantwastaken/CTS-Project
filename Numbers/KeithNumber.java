@@ -36,10 +36,10 @@ class KeithNumber {
         Scanner sc = new Scanner(System.in);
         KeithNumber ob  = new KeithNumber();
         
-        System.out.println("Enter an integer.");
+        System.out.println("N: ");
         int n = sc.nextInt();
         if(ob.isKeith(n)) {
-            System.out.println(n + " is a keith no.");
-        } else System.out.println(n + " is not a keith no.");
+            System.out.println(n + " is a Keith number.");
+        } else System.out.println(n + " is not a Keith number");
     }
 }
