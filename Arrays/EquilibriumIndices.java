@@ -26,7 +26,7 @@ class EquilibriumIndices{
     }
 
     void indices(){
-        boolean first = true; int count = 0;
+        boolean first = false;
         for(int i = 0; i < L; i++){
             int ls = 0; int rs = 0;
             for(int j = 0; j < i; j++)
@@ -34,14 +34,12 @@ class EquilibriumIndices{
             for(int k = i + 1; k < L; k++)
                 rs += A[k];
             if(rs == ls && first){
-                System.out.print(i); count++;
-                first=false;
+                System.out.print(i);
+                first=true;
             }
-            else if(rs == ls){
-                System.out.print(", "+i); count++;
-            }
+            if(rs == ls) System.out.print(", "+i);
         }
-        if(count==0)
+        if(!first)
             System.out.print("NIL");
     }
 

@@ -14,31 +14,28 @@ import java.util.Scanner;
 class MatrixPrimeSum {
     int M, N;
     int A[][];
+    static Scanner sc = new Scanner(System.in);
     MatrixPrimeSum(int mm, int nn) {
         M = mm;
         N = nn;
         A = new int[M][N];
     }
     void fillarray() {
-        Scanner sc = new Scanner(System.in);
         System.out.println("Array elements:");
-        for (int i = 0; i < M; i++) {
+        for (int i = 0; i < M; i++)
             for (int j = 0; j < N; j++) {
-                A[i][j] = sc.nextInt();
-                if (A[i][j] < 0) {
-                    System.out.println("INVALID INPUT");
-                    System.exit(0);
-                }
+            A[i][j] = sc.nextInt();
+            if (A[i][j] < 0) {
+                System.out.println("INVALID INPUT");
+                System.exit(0);
             }
         }
     }
-    boolean isPrime(int num) {
-        int f = 0;
-        for (int i = 1; i <= num; i++) {
-            if (num % i == 0)
-                f++;
-        }
-        return f == 2;
+    boolean isPrime(int n) {
+        for (int i = 2; i <= n / 2; i++)
+            if (n % i == 0)
+                return false;
+        return true;
     }
     void maxSum() {
         int maxRow = 0, maxCol = 0;
@@ -82,7 +79,6 @@ class MatrixPrimeSum {
             System.out.println("Column with max prime-sum: " + colIndex + " (sum = " + maxCol + ")");
     }
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
         System.out.print("M = ");
         int M = sc.nextInt();
         System.out.print("N = ");
