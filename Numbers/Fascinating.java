@@ -4,7 +4,7 @@ A fascinating number is a number which when multiplied by 2 and 3, and the
 concatenation of the results along with the original number contains all digits from 1 to 9 exactly once.
 
 For Example:
-INPUT:  n = 192
+INPUT:  N: 192
 OUTPUT: 192 is a Fascinating number.
 */
 import java.util.Scanner;
@@ -25,14 +25,14 @@ public class Fascinating {
         extract(num * 3);
         for (int i = 1; i <= 9; i++)
             if (!freq[i]) {
-                System.out.println(num + " is not fascinating.");
+                System.out.println(num + " is not a Fascinating number.");
             return;
         }
-        System.out.println(num + " is fascinating.");
+        System.out.println(num + " is a Fascinating number.");
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter an integer:");
+        System.out.println("N:");
         int a = sc.nextInt();
         Fascinating ob = new Fascinating(a);
         ob.isFascinating();

@@ -17,58 +17,60 @@ Output: FORMED MATRIX IS DOUBLY MARKOV
 import java.util.Scanner;
 class DoublyMarkov{
     int N; double M[][];
-    static Scanner sc = new Scanner(System.in);
-    
     DoublyMarkov(int nn){
-        N = nn;
-        M = new double[N][N];
+        N=nn;
+        M=new double[N][N];
     }
-    
     void fillarray(){
-        System.out.println("Enter elements of the matrix: ");
-        for(int i = 0; i < N; i++)
-            for(int j = 0; j < N; j++){
-            M[i][j] = sc.nextDouble();
-            if(M[i][j] < 0){
-                System.out.println("NEGATIVE NUMBERS ENTERED. INVALID ENTRY");
-                System.exit(0);
-            }
-        }
+        Scanner sc=new Scanner(System.in);
+        for(int i=0;i<N;i++)
+            for(int j=0;j<N;j++)
+                M[i][j]=sc.nextDouble();
     }
-
-    boolean isMarkov(){
-        for(int i = 0; i < N; i++){
-            double rowsum = 0, colsum = 0;
-            for(int j = 0; j < N; j++){
-                if(M[i][j] < 0) return false;   
-                rowsum += M[i][j];
-                colsum += M[j][i];
+    boolean check(){
+        boolean flag=true;
+        for(int i=0;i<N;i++){
+            double rowsum=0, colsum=0;
+            for(int j=0;j<N;j++){
+                if(M[i][j]<0){
+                    flag=false;
+                }
+                rowsum+=M[i][j];
+                colsum+=M[j][i];
             }
-            if(rowsum != 1 || colsum != 1) return false;   
+            if(rowsum!=1 || colsum!=1)
+                flag=false;
         }
-        return true;
+        return flag;
     }
-
     void display(){
-        if(isMarkov())
-            System.out.println("FORMED MATRIX IS DOUBLY MARKOV");
-        else
-            System.out.println("FORMED MATRIX IS NOT DOUBLY MARKOV");
+        System.out.println("FORMED MATRIX");
         for(double i[]: M){
             for(double j: i)
                 System.out.print(j+" ");
             System.out.println();
         }
+        if(check())
+            System.out.println("IT IS A DOUBLY MARKOV MATRIX");
+        else
+            System.out.println("IT IS NOT A DOUBLY MARKOV MATRIX");
     }
-
     public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
         System.out.print("N: ");
-        DoublyMarkov ob = new DoublyMarkov(sc.nextInt());
-        if(ob.N < 3 || ob.N > 9){
-            System.out.println("SIZE IS OUT OF RANGE");
+        DoublyMarkov ob=new DoublyMarkov(sc.nextInt());
+        if(ob.N<3 || ob.N>9){
+            System.out.println("SIZE IS OUT OF RANGE. INVALID ENTRY");
             return;
         }
+        System.out.print("Enter elements in the matrix: ");
         ob.fillarray();
+        for(int i=0;i<ob.N;i++)
+            for(int j=0;j<ob.N;j++)
+                if(ob.M[i][j]<0){
+                    System.out.println("NEGATIVE NUMBERS ENTERED. INVALID ENTRY");
+                    return;
+                }
         ob.display();
     }
 }
